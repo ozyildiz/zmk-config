@@ -11,7 +11,7 @@
 
 &mt {
     flavor = "balanced";
-	quick-tap-ms = <150>;
+	quick-tap-ms = <180>;
 };
 
 / {
@@ -32,10 +32,10 @@
             // | SHFT |  Z  |  X  |  C  |  V  |  B     |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | mo4 | LWR | lt3ENT |               | SPC | RSE  | ALT |
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp C_MUTE &kp C_PP &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G &kp LALT   &kp RALT &kp H &mt RALT J  &mt RCTRL K     &mt LGUI L   &mt RSHIFT SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                      &mo 4 &mo 1 &lt 3 RET              &kp SPACE &mo 2 &kp RALT
+                &kp TAB   &kp Q &kp W &kp E &kp R &kp T 						&kp C_MUTE &kp C_PP 	&kp Y &kp U 	 	&kp I 			&kp O 		&kp P    		&kp BSPC
+                &kp LCTRL &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G 	&kp LALT   &kp RALT 	&kp H &mt RALT J  	&mt RCTRL K     &mt LGUI L  &mt RSHIFT SEMI &kp SQT
+                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                     							&kp N &kp M  		&kp COMMA 		&kp DOT 	&kp FSLH 		&kp ESC
+                                      &mo 4 &mo 1 &lt 3 RET              								&kp SPACE &mo 2 &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -48,7 +48,7 @@
             // | SHFT | BTCR| RGB | RST | BOOT| Unlock|        |       |     |     |     |      |     |      |
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
             bindings = <
-                &kp TAB   &kp ESC       &kp N2          &kp N3       &kp N4       &kp N5       &kp LCTRL &kp RCTRL &kp N6   &kp RET   &kp BSPC &kp DEL    &kp N0 &kp BSPC
+                &kp TAB   &kp ESC       &kp N2          &kp N3       &kp N4       &kp N5       &kp LCTRL &kp RCTRL &kp N6   &kp N7   &kp RET &kp BSPC    &kp DEL &kp BSPC
                 &kp LCTRL &trans &trans &trans &trans &trans &kp LALT  &kp RALT  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
                 &kp LSHFT &trans &trans &trans &trans &trans 					 &trans   &trans   &trans &trans    &trans &trans
                                                        &kp LGUI     &trans       &kp SPACE                        &kp LGUI &trans   &kp SPACE
@@ -57,17 +57,17 @@
 
         raise_layer {
             display-name = "SYMBOL";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  `  |  @  |  #  |  $  | TAB | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
+            // --------------------------------------------------------------------------------------------
+            // |  TAB |  `  |  @  |  #  |     |     | LCTRL | RCTRL |  ^  | &   |  *   |  (  |  )   | BSPC |
+            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  | ALT | CTRL |  ]  | SHFT |  `   |
+            // | SHFT |     |     |     |     |     |               |  _  | +   |  {   |  }  | "|"  |  ~   |
+            //                    |     |     | SPC |               | ENT |     |      |
             bindings = <
-                &kp  TAB  &kp GRAVE &trans &trans &trans &kp TAB &kp LCTRL &kp RCTRL &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans    &kp LALT  &kp RALT  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+                &kp  TAB  &kp GRAVE &trans &trans &trans &trans &kp LCTRL &kp RCTRL &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+                &kp LCTRL &trans   &trans &trans   &trans   &trans    &kp LALT  &kp RALT  &kp MINUS &kp RALT &kp RCTRL &kp RBKT &kp RSHIFT &kp GRAVE
                 &kp LSHFT &trans   &trans &trans   &trans   &trans                        &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-                                          &kp LGUI &trans   &kp SPACE                     &kp RET   &trans    &kp RALT
-            >;
+                                          &trans &TAB   &kp SPACE                     &kp RET   &trans    &trans            
+			>;
         };
 
         extra_layer_1 {
@@ -81,21 +81,21 @@
         };
 
         extra_layer_2 {
-            display-name = "EXTRA 2";
-            bindings = <
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans               &trans &trans &trans       
-            >;
-        };
-
-        extra_layer_3 {
             display-name = "CONFIG";
             bindings = <
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans               &trans &trans &trans       
+            >;
+        };
+
+        extra_layer_3 {
+            display-name = "EXTRA 2";
+            bindings = <
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
                                      &trans &trans &trans               &trans &trans &trans       
             >;
         };
