@@ -26,61 +26,61 @@
 
         default_layer {
             display-name = "QWERTY";
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E     |  R  |  T     |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D     |  F  |  G     |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C     |  V  |  B     |               |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | mo4TAB | LWR | lt3ENT |               | SPC | RSE  | ALT |
+            // --------------------------------------------------------------------------------------------------
+            // | VOID |  Q  |  W  |  E     |  R  |  T     | VOID | VOID |  Y  |  U   |  I    |  O  |  P  | VOID |
+            // | VOID |  A  |  S  |  D     |  F  |  G     | VOID | VOID |  H  |  J   |  K    |  L  |  ;  | VOID |
+            // | VOID |  Z  |  X  |  C     |  V  |  B     |             |  N  |  M   |  ,    |  .  |  /  | VOID |
+            //                    | mo4TAB | LWR | lt3RET |             | SPC | RSE  | PSCRN |
             bindings = <
-                &kp TAB   &kp Q        &kp W 	  &kp E       &kp R      &kp T 	&kp C_MUTE &kp C_PP   &kp Y     &kp U 	 	&kp I 			&kp O 		&kp P    		&kp BSPC
-                &kp LCTRL &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G 	&kp LALT   &kp RALT   &kp H     &mt RALT J 	&mt RCTRL K     &mt LGUI L  &mt RSHIFT SEMI &kp SQT
-                &kp LSHFT &kp Z        &kp X 	  &kp C 	  &kp V      &kp B                     	  &kp N     &kp M  		&kp COMMA 		&kp DOT 	&kp FSLH 		&kp ESC
-                                                  &lt 4 TAB   &mo 1      &lt 3 RET 					  &kp SPACE &mo 2       &kp RALT
+                &kp X &kp Q        &kp W 	  &kp E       &kp R      &kp T 		&kp X &kp X   &kp Y     &kp U 	 	&kp I 		kp O 		&kp P    		&kp X
+                &kp X &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G 		&kp X &kp X   &kp H     &mt RALT J 	&mt RCTRL K &mt LGUI L  &mt RSHIFT SEMI &kp X
+                &kp X &kp Z        &kp X 	  &kp C 	  &kp V      &kp B     			  	  &kp N   	&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 		&kp X
+                                              &lt 4 TAB   &mo 1      &lt 3 RET 		      	  &kp SPACE &mo 2       &kp PSCRN
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         lower_layer {
-            display-name = "NAVIG";
-            // -----------------------------------------------------------------------------------------
-            // |  TAB | ESC |     |     |     |       |  LCTRL | RCTRL |     |     | ENT | BSPC | DEL | BSPC |
-            // | CTRL |     |     |     |     |       |  LALT  | RALT  | LFT | DWN |  UP | RGT  |     |      |
-            // | SHFT |     |     |     |     |       |        |       |     |     |     |      |     |      |
-            //                    |     |     | SPC   |        |       |     |     |
+            display-name = "CONSTR";
+            // ------------------------------------------------------------------------------------
+            // | VOID | ESC/` | TAB | RET     | BSPC | DEL | VOID | VOID |     | 7 | 8 | 9 | - | VOID |
+            // | VOID | SHFT  |  [  |  CTRL/U |  ]   |  \  | VOID | VOID |     | 4 | 5 | 6 | = | VOID |
+            // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID |
+				                    |         |      |     |             |     | 0 |   |
             bindings = <
-                &kp TAB   &kp ESC &trans &trans &trans &trans &kp LCTRL &kp RCTRL &trans   &trans   &kp RET &kp BSPC  &kp DEL &kp BSPC
-                &kp LCTRL &trans  &trans &trans &trans &trans &kp LALT  &kp RALT  &kp LEFT &kp DOWN &kp UP  &kp RIGHT &trans  &trans
-                &kp LSHFT &trans  &trans &trans &trans &trans 					  &trans   &trans   &trans  &trans    &trans  &trans
-                                         &trans &trans &kp SPACE                  &trans   &trans   &trans
+                &kp X &mt ESC GRAVE &kp TAB  &kp RET      &kp BSP        &kp DEL  &X &X &trans &kp N7 &kp N8 &kp N9        &kp KP_MINUS &kp X 
+                &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &X &X &trans &kp N4 &kp N5 &mt RSHIFT N6 &kp KP_EQUAL &kp X  
+                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans         &trans &kp N1 &kp N2 &kp N3        &kp APOS     &kp X  
+                                             &trans       &trans         &trans         &kp SPACE &kp N0 &trans       
             >;
         };
 
         raise_layer {
-            display-name = "SYMBOL";
-            // --------------------------------------------------------------------------------------------
-            // |  TAB |  `  |  [  |  ]  |  \  |     | LCTRL | RCTRL |     |     |      |     |      | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |     | ALT | CTRL |     | SHFT |      |
-            // | SHFT |     |     |     |     |     |               |     |     |      |     |      |      |
-            //                    |     |     | SPC |               | ENT |     |      |
+            display-name = "NAVIG";
+            // -----------------------------------------------------------------------------------------
+            // | VOID | ESC/` | TAB | RET | BSPC | DEL | VOID | VOID |  [  |  ]  | \  |     |  -  | VOID |
+            // | VOID |       |     |     |      |     | VOID | VOID | LFT | DWN | UP | RGT |  =  | VOID |
+            // | VOID |       |     |     |      |     |      |      |     |     |    |     |  '  | VOID |
+            //                      |     |      |     |      |      |     |     |
             bindings = <
-                &kp  TAB  &kp GRAVE &kp LBKT &kp RBKT &kp BSLH &trans &kp LCTRL &kp RCTRL &trans &trans &trans &trans &trans &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans    &kp LALT  &kp RALT  &trans &kp RALT &kp RCTRL &kp RBKT &kp RSHIFT &kp GRAVE
-                &kp LSHFT &trans   &trans &trans   &trans   &trans                        &trans &trans &trans &trans &trans &kp TILDE
-                                          &trans   &kp TAB  &kp SPACE                     &kp RET   &trans    &trans            
-			>;
+                &kp X &mt ESC GRAVE &kp TAB  &kp RET   &kp BSP  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS &kp X
+                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans  &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp KP_EQUAL &kp X
+                &kp X &trans  		&trans   &trans    &trans   &trans 			    &trans   &trans   &trans &trans    &kp APOS     &kp X
+                                    &trans   &trans    &trans                      &trans   &trans   &trans
+            >;
         };
 
         extra_layer_1 {
             display-name = "NUMPAD";
-            // --------------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     | LCTRL | RCTRL |     |     |      |     |      |      |
-            // |      |     |     |     |     |     |  LALT | RALT  |     |     |      |     |      |      |
-            // |      |     |     |     |     |     |               |     |     |      |     |      |      |
-            //                    |     |     |     |               |     |     |      |
+            // -----------------------------------------------------------------------------------------
+            // | VOID |     |     |     |      |     | VOID | VOID |     |     |    |     |     | VOID |
+            // | VOID |     |     |     |      |     | VOID | VOID |     |     |    |     |     | VOID |
+            // | VOID |     |     |     |      |     |      |      |     |     |    |     |     | VOID |
+            //                    |     |      |     |      |      |     |     |
             bindings = <
-                &trans &trans &trans   &kp UP 	&trans 	  &trans &trans &trans &trans   &kp N7 &kp N8 &kp N9 &kp BSPC  &kp KP_MINUS
-                &trans &trans &kp LEFT &kp DOWN	&kp RIGHT &trans &trans &trans &trans   &kp N4 &kp N5 &kp N6 &kp DEL   &kp KP_EQUAL
-                &trans &trans &trans   &trans   &trans    &trans           	   &kp RET &kp N1 &kp N2 &kp N3 &kp DOT    &kp APOS
+                &trans &trans  &trans   &kp UP 	 &kp BKSP  &trans &trans &trans &trans   &kp N7 &kp N8 &kp N9 &kp KP_MINUS &kp BSPC 
+                &trans &kp RET &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &kp DOT  &kp N4 &kp N5 &kp N6 &kp KP_EQUAL &kp DEL   
+                &trans &trans &trans   &trans   &trans    &trans           	   &kp RET   &kp N1 &kp N2 &kp N3 &kp APOS     &kp DOT   
                                        &trans   &trans    &trans               &kp SPACE &kp N0 &kp RET       
             >;
         };
