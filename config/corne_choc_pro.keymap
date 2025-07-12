@@ -45,8 +45,7 @@
             // ------------------------------------------------------------------------------------
             // | VOID | ESC/` | TAB | RET     | BSPC | DEL | VOID | VOID |     | 7 | 8 | 9 | - | VOID |
             // | VOID | SHFT  |  [  |  CTRL/U |  ]   |  \  | VOID | VOID |     | 4 | 5 | 6 | = | VOID |
-            // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID |
-				                    |         |      |     |             |     | 0 |   |
+            // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID | |         |      |     |             |     | 0 |   |
             bindings = <
                 &kp X &mt ESC GRAVE &kp TAB  &kp RET      &kp BSP        &kp DEL  &X &X &trans &kp N7 &kp N8 &kp N9        &kp KP_MINUS &kp X 
                 &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &X &X &trans &kp N4 &kp N5 &mt RSHIFT N6 &kp KP_EQUAL &kp X  
