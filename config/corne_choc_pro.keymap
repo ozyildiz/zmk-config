@@ -48,7 +48,7 @@
             // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID | 
 			// 						|         |      |     |             |     | 0 |   |
             bindings = <
-                &kp X &kp ESC		&kp TAB  &kp RET      &kp BSPC       &kp DEL  &kp X &kp X &trans    &kp N7 &kp N8 &kp N9        &kp KP_MINUS &kp X 
+                &kp X &mt ESC GRAVE	&kp TAB  &kp RET      &kp BSPC       &kp DEL  &kp X &kp X &trans    &kp N7 &kp N8 &kp N9        &kp KP_MINUS &kp X 
                 &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &kp X &kp X &trans    &kp N4 &kp N5 &mt RSHIFT N6 &kp KP_EQUAL &kp X  
                 &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1 &kp N2 &kp N3        &kp APOS     &kp X  
                                              &trans       &trans         &trans               &kp SPACE &kp N0 &trans       
@@ -63,9 +63,9 @@
             // | VOID |       |     |     |      |     |      |      |     |     |    |     |  '  | VOID |
             //                      |     |      |     |      |      |     |     |
             bindings = <
-                &kp X &mt ESC GRAVE &kp TAB  &kp RET   &kp BSP  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS &kp X
-                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans  &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp KP_EQUAL &kp X
-                &kp X &trans  		&trans   &trans    &trans   &trans 			    &trans   &trans   &trans &trans    &kp APOS     &kp X
+                &kp X &mt ESC GRAVE &kp TAB  &kp RET   &kp BSPC  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS &kp X
+                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp KP_EQUAL &kp X
+                &kp X &trans  		&trans   &trans    &trans   &trans 			     &trans   &trans   &trans   &trans    &kp APOS     &kp X
                                     &trans   &trans    &trans                      &trans   &trans   &trans
             >;
         };
