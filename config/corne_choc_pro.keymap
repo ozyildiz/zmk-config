@@ -43,14 +43,14 @@
         lower_layer {
             display-name = "NUMBER";
             // ------------------------------------------------------------------------------------
-            // | VOID |     ` |  [  | ]      |  \  |     | VOID | VOID | 7 | 8 | 9 | BSP | = | VOID |
-            // | VOID | SHFT  |     | CTRL/U | ALT |     | VOID | VOID | 4 | 5 | 6 | RET | - | VOID |
-            // | VOID |       |  L  | D      |  R  |     |             | 1 | 2 | 3 |     | ' | VOID | 
-			// 						|        |     |     |             | 0 |   |   |
+            // | VOID |     ` |  [  | ]      |  \  |     | VOID | VOID |     | 7 | 8 | 9 | = | VOID |
+            // | VOID | SHFT  |     | CTRL/U | ALT |     | VOID | VOID |     | 4 | 5 | 6 | - | VOID |
+            // | VOID |       |  L  | D      |  R  |     |             |     | 1 | 2 | 3 | ' | VOID | 
+			// 						|        |     |     |             | SPC | 0 |   |
 			bindings = <
 				&kp X &kp GRAVE	    &kp RBKT &kp LBKT     &kp BSLH       &trans   &kp X &kp X &trans    &kp N7   &kp N8    &kp N9 &kp KP_EQUAL        &kp X 
-                &kp X &kp LSHIFT    &trans   &mt LCTRL UP &kp LALT	     &trans   &kp X &kp X &trans    &kp N4   &kp N5    &kp N6 &mt RSHIFT MINUS    &kp X  
-                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1   &kp N2    &kp N3 &kp APOS            &kp X  
+                &kp X &kp LSHIFT    &trans   &kp LCTRL    &kp LALT	     &trans   &kp X &kp X &trans    &kp N4   &kp N5    &kp N6 &mt RSHIFT MINUS    &kp X  
+                &kp X &trans        &trans   &trans       &trans         &trans               &trans    &kp N1   &kp N2    &kp N3 &kp APOS            &kp X  
                                              &trans       &trans         &trans               &kp SPACE &lt 2 N0 &trans        
             >;
         };
@@ -63,7 +63,7 @@
             // | VOID |       |     |     |      |     |      |      |     |     |     |     |  '  | VOID |
             //                      |     |      |     |      |      |     |     |
             bindings = <
-                &kp X &kp ESC       &kp RBKT &kp LBKT  &kp BSLH &trans   &kp X &kp X &trans   &trans   &kp RET  &kp BSPC  &kp DEL 			  &kp X
+                &kp X &kp ESC       &kp LBKT &kp RBKT  &kp BSLH &trans   &kp X &kp X &trans   &trans   &kp RET  &kp BSPC  &kp DEL 			  &kp X
                 &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &mt RSHIFT MINUS    &kp X
                 &kp X &trans  		&trans   &trans    &trans   &trans 			     &trans   &trans   &trans   &trans    &kp APOS     		  &kp X
                                     &trans   &trans    &trans                        &trans   &trans   &trans
