@@ -30,7 +30,7 @@
             // | VOID |  Q  |  W  |  E     |  R  |  T     | VOID | VOID |  Y  |  U   |  I    |  O  |  P  | VOID |
             // | VOID |  A  |  S  |  D     |  F  |  G     | VOID | VOID |  H  |  J   |  K    |  L  |  ;  | VOID |
             // | VOID |  Z  |  X  |  C     |  V  |  B     |             |  N  |  M   |  ,    |  .  |  /  | VOID |
-            //                    | mo4TAB | LWR | lt3RET |             | SPC | RSE  | PSCRN |
+            //                    | mo4TAB | LWR | lt1RET |             | SPC | RSE  | PSCRN |
             bindings = <
                 &kp X &kp Q        &kp W 	  &kp E       &kp R      &kp T 		&kp X &kp X   &kp Y     &kp U 	 	&kp I 		&kp O 		&kp P    		&kp X
                 &kp X &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G 		&kp X &kp X   &kp H     &mt RALT J 	&mt RCTRL K &mt LGUI L  &mt RSHIFT SEMI &kp X
@@ -43,28 +43,28 @@
         lower_layer {
             display-name = "NUMBER";
             // ------------------------------------------------------------------------------------
-            // | VOID | ESC/` | TAB | RET     | BSPC | DEL | VOID | VOID |     | 7 | 8 | 9 | - | VOID |
-            // | VOID | SHFT  |  [  |  CTRL/U |  ]   |  \  | VOID | VOID |     | 4 | 5 | 6 | = | VOID |
-            // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID | 
-			// 						|         |      |     |             |     | 0 |   |
+            // | VOID |     ` |  [  | ]      |  \  |     | VOID | VOID | 7 | 8 | 9 | BSP | = | VOID |
+            // | VOID | SHFT  |     | CTRL/U | ALT |     | VOID | VOID | 4 | 5 | 6 | RET | - | VOID |
+            // | VOID |       |  L  | D      |  R  |     |             | 1 | 2 | 3 |     | ' | VOID | 
+			// 						|        |     |     |             | 0 |   |   |
 			bindings = <
-				&kp X &mt ESC GRAVE	&kp TAB  &kp RET      &kp BSPC       &kp DEL  &kp X &kp X &trans    &kp N7 &kp N8 &kp N9  &kp MINUS           &kp X 
-                &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &kp X &kp X &trans    &kp N4 &kp N5 &kp N6  &mt RSHIFT KP_EQUAL &kp X  
-                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1 &kp N2 &kp N3  &kp APOS            &kp X  
-                                             &trans       &trans         &trans               &kp SPACE &kp N0 &trans       
+				&kp X &kp GRAVE	    &kp RBKT &kp LBKT     &kp BSLH       &trans   &kp X &kp X &trans    &kp N7   &kp N8    &kp N9 &kp KP_EQUAL        &kp X 
+                &kp X &kp LSHIFT    &trans   &mt LCTRL UP &kp LALT	     &trans   &kp X &kp X &trans    &kp N4   &kp N5    &kp N6 &mt RSHIFT MINUS    &kp X  
+                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1   &kp N2    &kp N3 &kp APOS            &kp X  
+                                             &trans       &trans         &trans               &kp SPACE &lt 2 N0 &trans        
             >;
         };
 
         raise_layer {
             display-name = "NAVIG";
             // -----------------------------------------------------------------------------------------
-            // | VOID | ESC   | TAB | RET | BSPC | DEL | VOID | VOID |  [  |  ]  | \  |     |  -  | VOID |
-            // | VOID |       |     |     |      |     | VOID | VOID | LFT | DWN | UP | RGT |  =  | VOID |
-            // | VOID |       |     |     |      |     |      |      |     |     |    |     |  '  | VOID |
+            // | VOID | ESC   |  [  |  ]  |  \   |     | VOID | VOID |     |     | RET | BSP | DEL | VOID |
+            // | VOID |       |     |     |      |     | VOID | VOID | LFT | DWN | UP  | RGT |  =  | VOID |
+            // | VOID |       |     |     |      |     |      |      |     |     |     |     |  '  | VOID |
             //                      |     |      |     |      |      |     |     |
             bindings = <
-                &kp X &kp ESC       &kp TAB  &kp RET   &kp BSPC  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS 		  &kp X
-                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &mt RSHIFT KP_EQUAL &kp X
+                &kp X &kp ESC       &kp RBKT &kp LBKT  &kp BSLH &trans   &kp X &kp X &trans   &trans   &kp RET  &kp BSPC  &kp DEL 			  &kp X
+                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &mt RSHIFT MINUS    &kp X
                 &kp X &trans  		&trans   &trans    &trans   &trans 			     &trans   &trans   &trans   &trans    &kp APOS     		  &kp X
                                     &trans   &trans    &trans                        &trans   &trans   &trans
             >;
