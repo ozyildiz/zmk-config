@@ -35,22 +35,22 @@
                 &kp X &kp Q        &kp W 	  &kp E       &kp R      &kp T 		&kp X &kp X   &kp Y     &kp U 	 	&kp I 		&kp O 		&kp P    		&kp X
                 &kp X &mt LSHIFT A &mt LGUI S &mt LCTRL D &mt LALT F &kp G 		&kp X &kp X   &kp H     &mt RALT J 	&mt RCTRL K &mt LGUI L  &mt RSHIFT SEMI &kp X
                 &kp X &kp Z        &kp X 	  &kp C 	  &kp V      &kp B     			  	  &kp N   	&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 		&kp X
-                                              &lt 4 TAB   &mo 2      &lt 1 RET 		      	  &kp SPACE &mo 2       &kp PSCRN
+                                              &lt 4 TAB   &mo 2      &lt 1 RET 		      	  &kp SPACE &mo 1       &kp PSCRN
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         lower_layer {
-            display-name = "CONSTR";
+            display-name = "NUMBER";
             // ------------------------------------------------------------------------------------
             // | VOID | ESC/` | TAB | RET     | BSPC | DEL | VOID | VOID |     | 7 | 8 | 9 | - | VOID |
             // | VOID | SHFT  |  [  |  CTRL/U |  ]   |  \  | VOID | VOID |     | 4 | 5 | 6 | = | VOID |
             // | VOID |       |  L  |  D      |  R   |     |             |     | 1 | 2 | 3 | ' | VOID | 
 			// 						|         |      |     |             |     | 0 |   |
 			bindings = <
-				&kp X &mt ESC GRAVE	&kp TAB  &kp RET      &kp BSPC       &kp DEL  &kp X &kp X &trans    &kp N7 &kp N8 &kp N9        &kp MINUS    &kp X 
-                &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &kp X &kp X &trans    &kp N4 &kp N5 &mt RSHIFT N6 &kp KP_EQUAL &kp X  
-                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1 &kp N2 &kp N3        &kp APOS     &kp X  
+				&kp X &mt ESC GRAVE	&kp TAB  &kp RET      &kp BSPC       &kp DEL  &kp X &kp X &trans    &kp N7 &kp N8 &kp N9  &kp MINUS           &kp X 
+                &kp X &kp LSHIFT    &kp LBKT &mt LCTRL UP &mt LALT RBKT	 &kp BSLH &kp X &kp X &trans    &kp N4 &kp N5 &kp N6  &mt RSHIFT KP_EQUAL &kp X  
+                &kp X &trans        &kp LEFT &kp DOWN     &kp RIGHT      &trans               &trans    &kp N1 &kp N2 &kp N3  &kp APOS            &kp X  
                                              &trans       &trans         &trans               &kp SPACE &kp N0 &trans       
             >;
         };
@@ -63,9 +63,9 @@
             // | VOID |       |     |     |      |     |      |      |     |     |    |     |  '  | VOID |
             //                      |     |      |     |      |      |     |     |
             bindings = <
-                &kp X &kp ESC       &kp TAB  &kp RET   &kp BSPC  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS &kp X
-                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp KP_EQUAL &kp X
-                &kp X &trans  		&trans   &trans    &trans   &trans 			     &trans   &trans   &trans   &trans    &kp APOS     &kp X
+                &kp X &kp ESC       &kp TAB  &kp RET   &kp BSPC  &kp DEL &kp X &kp X &kp LBKT &kp RBKT &kp BSLH &trans    &kp KP_MINUS 		  &kp X
+                &kp X &kp LSHIFT	&kp LGUI &kp LCTRL &kp LALT &trans   &kp X &kp X &kp LEFT &kp DOWN &kp UP   &kp RIGHT &mt RSHIFT KP_EQUAL &kp X
+                &kp X &trans  		&trans   &trans    &trans   &trans 			     &trans   &trans   &trans   &trans    &kp APOS     		  &kp X
                                     &trans   &trans    &trans                        &trans   &trans   &trans
             >;
         };
