@@ -48,7 +48,7 @@
             // | VOID |       |  L  | D      |  R  |     |             |     | 1 | 2 | 3 | ' | VOID | 
 			// 						|        |     |     |             | SPC | 0 |   |
 			bindings = <
-				&kp X &kp GRAVE	    &kp LBKT &kp RBKT     &kp BSLH       &trans   &kp X &kp X &trans    &kp N7   &kp N8    &kp N9 &kp KP_EQUAL        &kp X 
+				&kp X &kp GRAVE	    &kp LBKT &kp RBKT     &kp BSLH       &trans   &kp X &kp X &trans    &kp N7   &kp N8    &kp N9 &kp EQUAL           &kp X 
                 &kp X &kp LSHIFT    &trans   &kp LCTRL    &kp LALT	     &trans   &kp X &kp X &trans    &kp N4   &kp N5    &kp N6 &mt RSHIFT MINUS    &kp X  
                 &kp X &trans        &trans   &trans       &trans         &trans               &trans    &kp N1   &kp N2    &kp N3 &kp APOS            &kp X  
                                              &trans       &trans         &trans               &kp SPACE &lt 2 N0 &trans        
